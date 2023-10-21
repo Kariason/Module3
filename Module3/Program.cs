@@ -10,8 +10,15 @@ namespace Module3
     {
         static void Main(string[] args)
         {
-            string MyName = "Nikita";
-            Console.WriteLine(MyName);
+            string myName = "Nikita";
+            byte age = 26;
+            bool pet = false;
+            float footSize = 43.5F;
+
+            Console.WriteLine("My name is "+myName);
+            Console.WriteLine("My age "+age);
+            Console.WriteLine("Do i have a pet? "+pet);
+            Console.WriteLine("My shoe size is "+footSize);
         }
     }
 }
