@@ -13,21 +13,25 @@ namespace Module3
             monday = 1,
             tuesday,
             wednesday,
+            thursday,
             friday,
             saturday,
             sunday
         }
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter your name: ");
+            var name = Console.ReadLine();
 
-            Console.Write("Enter your name: ");
-            string name = Console.ReadLine();
-            Console.Write("Enter your age: ");
-            byte age = checked((byte)int.Parse(Console.ReadLine()));
-            Console.WriteLine("What if your favorite day of week?");
-            DayOfWeek MyFavoriteDay = (DayOfWeek)int.Parse(Console.ReadLine());
-            Console.WriteLine("Your name is {0} and age is {1} and your favorite day of week {2} ", name, age, MyFavoriteDay);
-            Console.ReadKey();
+            Console.WriteLine("Enter your age: ");
+            var age = checked((byte)int.Parse(Console.ReadLine()));
+
+            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+
+            Console.Write("What is your favorite day of week? ");
+            var day = (DayOfWeek)int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Your favorite day is {0}", day);
         }
     }
 }
