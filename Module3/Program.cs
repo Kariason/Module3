@@ -8,17 +8,26 @@ namespace Module3
 {
     internal class Program
     {
+        enum DayOfWeek : byte
+        {
+            monday = 1,
+            tuesday,
+            wednesday,
+            friday,
+            saturday,
+            sunday
+        }
         static void Main(string[] args)
         {
-            string myName = "Nikita";
-            byte age = 26;
-            bool pet = false;
-            float footSize = 43.5F;
 
-            Console.WriteLine("My name is "+myName);
-            Console.WriteLine("My age "+age);
-            Console.WriteLine("Do i have a pet? "+pet);
-            Console.WriteLine("My shoe size is "+footSize);
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter your age: ");
+            byte age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.WriteLine("What if your favorite day of week?");
+            DayOfWeek MyFavoriteDay = (DayOfWeek)int.Parse(Console.ReadLine());
+            Console.WriteLine("Your name is {0} and age is {1} and your favorite day of week {2} ", name, age, MyFavoriteDay);
+            Console.ReadKey();
         }
     }
 }
