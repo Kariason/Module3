@@ -8,30 +8,18 @@ namespace Module3
 {
     internal class Program
     {
-        enum DayOfWeek : byte
-        {
-            monday = 1,
-            tuesday,
-            wednesday,
-            thursday,
-            friday,
-            saturday,
-            sunday
-        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter your name: ");
+            Console.Write("Здравствуйте! Введите Ваше имя: ");
             var name = Console.ReadLine();
 
-            Console.WriteLine("Enter your age: ");
-            var age = checked((byte)int.Parse(Console.ReadLine()));
+            Console.Write("Введите Ваш возраст: ");
+            var age = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Your name is {0} and age is {1} ", name, age);
+            Console.Write("Введите Вашу дату рождения: ");
+            var birthdate = Console.ReadLine();
 
-            Console.Write("What is your favorite day of week? ");
-            var day = (DayOfWeek)int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Your favorite day is {0}", day);
+            Console.WriteLine("Ваше имя - {0}.\nВаш возраст - {1}.\nВы родились - {2}", name, age, birthdate);
         }
     }
 }
